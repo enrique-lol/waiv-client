@@ -85,29 +85,41 @@ Button {
   color: $yellow;
 }
 
-.home-image {
-  display: block;
-  height: auto;
-  margin-bottom: 5%;
-  // margin-left: auto;
-  // margin-right: auto;
-  // max-width: 100%;
-  // width: 100%;
-}
+// .home-image {
+//   display: block;
+//   height: auto;
+//   margin-bottom: 5%;
+//   // margin-left: auto;
+//   // margin-right: auto;
+//   // max-width: 100%;
+//   // width: 100%;
+// }
 
 .article-container {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0;
 }
 
-.article-card {
+.home-card {
   background-color: $opaquewhite;
-  border-radius: 20px;
+  border-radius: 12px;
   color: $black;
+  margin-top: 30px;
 }
+
+.home-image {
+  max-width: 100%;
+}
+
+.bot-card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
 
 .article-main {
   align-items: center;

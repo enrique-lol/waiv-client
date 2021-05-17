@@ -24,7 +24,7 @@ class App extends Component {
     super(props)
     this.state = {
       user: null,
-      admin: 'lol@lol',
+      guestId: '9e41c@f53D',
       msgAlerts: []
     }
   }
@@ -47,11 +47,11 @@ class App extends Component {
   }
 
   render () {
-    const { msgAlerts, user, admin } = this.state
+    const { msgAlerts, user, guestId } = this.state
 
     return (
       <Fragment>
-        <Header user={user} admin={admin} />
+        <Header user={user} guestId={guestId} />
         {msgAlerts.map(msgAlert => (
           <AutoDismissAlert
             key={msgAlert.id}
@@ -67,6 +67,9 @@ class App extends Component {
             <IndexArticles msgAlert={this.msgAlert} />
           )} />
           <Route exact path='/about' render={() => (
+            <FutureFeature msgAlert={this.msgAlert} setUser={this.setUser} />
+          )} />
+          <Route exact path='/my-profile' render={() => (
             <FutureFeature msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
           <Route path='/sign-up' render={() => (

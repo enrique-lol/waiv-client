@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { articleIndex } from '../api/article-auth.js'
-import { Card } from 'react-bootstrap'
+// import { Card } from 'react-bootstrap'
 
 class ArticleIndex extends Component {
   constructor (props) {
@@ -44,17 +44,19 @@ class ArticleIndex extends Component {
 
     const articlesJsx = articles.map(article => (
       <Link to={`/home/articles/${article.id}`} key={article.id}>
-        <Card className='article-card'>
-          <Card.Img variant="top" src={article.mainImageUrl} />
-          <Card.Body>
-            <Card.Title className='roboto-mono thicc-letters'>{article.title}</Card.Title>
-            <Card.Text>
-              {article.authorName}
-            </Card.Text>
-          </Card.Body>
-        </Card>
+        <article className='home-card'>
+          <section className='top-card'>
+            <img className='home-image' src={article.mainImageUrl}/>
+          </section>
+
+          <section className='bot-card'>
+            <h3 className='roboto-mono thicc-letters'>{article.title}</h3>
+            <p>{article.authorName}</p>
+          </section>
+        </article>
       </Link>
     ))
+
     return (
       <Fragment>
         <div className='divider'>
@@ -67,5 +69,15 @@ class ArticleIndex extends Component {
     )
   }
 }
+
+// <Card className='home-card'>
+//   <Card.Img variant="top" src={article.mainImageUrl} />
+//   <Card.Body>
+//     <Card.Title className='roboto-mono thicc-letters'>{article.title}</Card.Title>
+//     <Card.Text>
+//       {article.authorName}
+//     </Card.Text>
+//   </Card.Body>
+// </Card>
 
 export default ArticleIndex
