@@ -57,10 +57,17 @@ class ViewArticle extends Component {
           <div className='article-main'>
             <h2 className='roboto-mono'>{article.title}</h2>
             <h4 className='roboto-mono'>{article.authorName}</h4>
-            <div className='art-img-container'>
-              <img className='article-image' src={article.mainImageUrl}></img>
-            </div>
-            <p className='art-text raleway'>{article.content}</p>
+            <img className='article-image' src={article.mainImageUrl}/>
+            <p className='art-text'>{article.intro}</p>
+            {article.img2 ? <img className='article-image' src={article.img2}/> : null }
+            {article.heading2 ? <h5 className='head-text'>{article.heading2}</h5> : null }
+            {article.paragraph2 ? <p className='art-text'>{article.paragraph2}</p> : null }
+            {article.img3 ? <img className='article-image' src={article.img3}/> : null }
+            {article.heading3 ? <h5 className='head-text'>{article.heading3}</h5> : null }
+            {article.paragraph3 ? <p className='art-text'>{article.paragraph3}</p> : null }
+            {article.img4 ? <img className='article-image' src={article.img4}/> : null }
+            {article.heading4 ? <h5 className='head-text'>{article.heading4}</h5> : null }
+            {article.paragraph4 ? <p className='art-text'>{article.paragraph4}</p> : null }
           </div>
 
           <div>

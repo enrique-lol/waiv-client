@@ -62,7 +62,7 @@ class ArticleIndex extends Component {
         <div className='divider'>
           <h2 className='featured-text raleway'>Featured</h2>
         </div>
-        <div className='article-container'>
+        <div className='bannana'>
           {articlesJsx}
         </div>
       </Fragment>
