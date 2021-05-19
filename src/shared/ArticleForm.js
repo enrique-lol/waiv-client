@@ -19,7 +19,6 @@ const ArticleForm = ({ article, handleSubmit, handleChange }) => (
       onChange={handleChange}
     />
     <input
-      required
       name="img2"
       type="text"
       placeholder="img2"
@@ -27,7 +26,6 @@ const ArticleForm = ({ article, handleSubmit, handleChange }) => (
       onChange={handleChange}
     />
     <input
-      required
       name="heading2"
       type="text"
       placeholder="heading2"
@@ -35,7 +33,6 @@ const ArticleForm = ({ article, handleSubmit, handleChange }) => (
       onChange={handleChange}
     />
     <input
-      required
       name="paragraph2"
       type="text"
       placeholder="paragraph2"
@@ -43,7 +40,6 @@ const ArticleForm = ({ article, handleSubmit, handleChange }) => (
       onChange={handleChange}
     />
     <input
-      required
       name="img3"
       type="text"
       placeholder="img3"
@@ -51,7 +47,6 @@ const ArticleForm = ({ article, handleSubmit, handleChange }) => (
       onChange={handleChange}
     />
     <input
-      required
       name="heading3"
       type="text"
       placeholder="heading3"
@@ -59,7 +54,6 @@ const ArticleForm = ({ article, handleSubmit, handleChange }) => (
       onChange={handleChange}
     />
     <input
-      required
       name="paragraph3"
       type="text"
       placeholder="paragraph3"
@@ -67,7 +61,6 @@ const ArticleForm = ({ article, handleSubmit, handleChange }) => (
       onChange={handleChange}
     />
     <input
-      required
       name="img4"
       type="text"
       placeholder="img4"
@@ -75,7 +68,6 @@ const ArticleForm = ({ article, handleSubmit, handleChange }) => (
       onChange={handleChange}
     />
     <input
-      required
       name="heading4"
       type="text"
       placeholder="heading4"
@@ -83,7 +75,6 @@ const ArticleForm = ({ article, handleSubmit, handleChange }) => (
       onChange={handleChange}
     />
     <input
-      required
       name="paragraph4"
       type="text"
       placeholder="paragraph4"
@@ -104,6 +95,14 @@ const ArticleForm = ({ article, handleSubmit, handleChange }) => (
       type="text"
       placeholder="1 image url"
       value={article.mainImageUrl}
+      onChange={handleChange}
+    />
+    <input
+      required
+      name="publishDate"
+      type="text"
+      placeholder="publishDate"
+      value={article.publishdate}
       onChange={handleChange}
     />
     <button type="submit">Submit</button>
